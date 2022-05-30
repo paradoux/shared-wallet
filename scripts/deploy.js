@@ -2,7 +2,7 @@ const hre = require("hardhat");
 
 async function main() {
   const SharedWallet = await hre.ethers.getContractFactory("SharedWallet");
-  const sharedWallet = await SharedWallet.deploy("Hello, Hardhat!");
+  const sharedWallet = await SharedWallet.deploy();
 
   await sharedWallet.deployed();
 
