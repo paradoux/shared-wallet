@@ -56,7 +56,7 @@ To get a local copy up and running follow these simple steps.
 1. Clone the repo
 
 ```sh
-git clone https://github.com/paradoux/small-token.git
+git clone https://github.com/paradoux/shared-wallet.git
 ```
 
 2. Install the packages
