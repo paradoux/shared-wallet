@@ -38,7 +38,9 @@ describe("SharedWallet", () => {
 
         const account1InitialBalance = await account1.getBalance();
 
-        await sharedWallet.connect(owner).with;
+        await sharedWallet
+          .connect(owner)
+          .withdrawFundsFromContract(account1.address, ethAmount);
 
         expect(await sharedWallet.getContractBalance()).to.equal(
           ethers.utils.parseEther("0")

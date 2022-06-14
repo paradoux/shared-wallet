@@ -79,7 +79,8 @@ contract SharedWallet is Ownable {
             allowances[msg.sender] -= amount;
         }
 
-        to.transfer(amount);
+        (bool success, ) = to.call{value: amount}("");
+        require(success == true, "Transfer failed");
         emit MoneySent(msg.sender, to, amount);
     }
 
